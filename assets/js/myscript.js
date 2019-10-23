@@ -4,23 +4,21 @@ var cognome = prompt("Inserisci il tuo cognome : ");
 var cognomeGroup = ["Novello", "Primerano", "Forghieri", "Gallici", "Siri", "Jolanda", "Provolo", "Rispoli"];
 // e stampa la lista ordinata alfabeticamente.
 var inserito = false;
-var i = 0;
-var j = 0;
+var i = 0,j=0;
 
 while (i<cognomeGroup.length && !inserito) {
-  console.log(cognomeGroup[i]);
-  if (cognome!=cognomeGroup[i]) {
+  if (cognome==cognomeGroup[i]) {
     inserito == true;
+    console.log("Il cognome è gia presente nella lista");
   }
   i++;
 }
-
-if (inserito===true) {
+if (inserito==false) {
   cognomeGroup.push(cognome);
 }
-while (j<cognomeGroup.length) {
+while (j<cognomeGroup.length){
   console.log(cognomeGroup[j]);
-  j++
+  j++;
 }
 
 
