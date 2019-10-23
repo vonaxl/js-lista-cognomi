@@ -19,7 +19,7 @@ while (i<cognomeGroup.length) {
 if (inserito===false) {
   cognomeGroup.push(cognome);
 }
-
+// output prima di essere ordinato
 console.log("Lista COGNOME INORDINATA");
 while (n<cognomeGroup.length){
   console.log(cognomeGroup[n]);
