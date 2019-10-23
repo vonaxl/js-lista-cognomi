@@ -3,7 +3,7 @@ var cognome = prompt("Inserisci il tuo cognome : ");
 console.log("Il cognome inserito è : "+cognome);
 var cognomeGroup = ["Novello", "Primerano", "Forghieri", "Gallici", "Siri", "Jolanda", "Provolo", "Rispoli"];
 var inserito = false;
-var i = 0, j=0;
+var i = 0, j=0, p;
 
 while (i<cognomeGroup.length) {
   if (cognome==cognomeGroup[i]) {
@@ -24,4 +24,7 @@ while (j<cognomeGroup.length){
   console.log(cognomeGroup[j]);
   j++;
 }
+
 // Scrivi anche la posizione della lista in cui il nuovo utente si trova
+p = 1+cognomeGroup.indexOf(cognome);
+console.log(p);
