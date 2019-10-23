@@ -1,21 +1,24 @@
 // Chiedi all’utente il cognome,
 var cognome = prompt("Inserisci il tuo cognome : ");
-// inseriscilo in un array con altri cognomi
+console.log("Il cognome inserito è : "+cognome);
 var cognomeGroup = ["Novello", "Primerano", "Forghieri", "Gallici", "Siri", "Jolanda", "Provolo", "Rispoli"];
-// e stampa la lista ordinata alfabeticamente.
 var inserito = false;
 var i = 0,j=0;
 
-while (i<cognomeGroup.length && !inserito) {
+while (i<cognomeGroup.length) {
   if (cognome==cognomeGroup[i]) {
-    inserito == true;
+    inserito = true;
     console.log("Il cognome è gia presente nella lista");
   }
   i++;
 }
-if (inserito==false) {
+
+// inseriscilo in un array con altri cognomi
+if (inserito===false) {
   cognomeGroup.push(cognome);
 }
+// e stampa la lista ordinata alfabeticamente.
+
 while (j<cognomeGroup.length){
   console.log(cognomeGroup[j]);
   j++;
