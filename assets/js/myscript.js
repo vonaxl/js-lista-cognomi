@@ -1,5 +1,6 @@
 // Chiedi all’utente il cognome,
 var cognome = prompt("Inserisci il tuo cognome : ");
+document.getElementById('cognomeOutput').innerHTML = cognome;
 console.log("Il cognome inserito è : "+cognome);
 var cognomeGroup = ["Novello", "Primerano", "Forghieri", "Gallici", "Siri", "Jolanda", "Provolo", "Rispoli"];
 var inserito = false;
@@ -22,8 +23,8 @@ if (inserito===false) {
 console.log("Lista COGNOME ORDINATA");
 while (j<cognomeGroup.length){
   console.log(cognomeGroup[j]);
-  contenutoPrecedente = document.getElementById("cognomeOutput").innerHTML;
-  document.getElementById("cognomeOutput").innerHTML = contenutoPrecedente + "<li>" + cognomeGroup[j] + "</li>";
+  contenutoPrecedente = document.getElementById("cognomeGroupOutput").innerHTML;
+  document.getElementById("cognomeGroupOutput").innerHTML = contenutoPrecedente + "<li>" + cognomeGroup[j] + "</li>";
   j++;
 }
 
