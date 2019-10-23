@@ -27,4 +27,4 @@ while (j<cognomeGroup.length){
 
 // Scrivi anche la posizione della lista in cui il nuovo utente si trova
 p = 1+cognomeGroup.indexOf(cognome);
-console.log(p);
+console.log("La posizione è = "+p);
