@@ -3,7 +3,7 @@ var cognome = prompt("Inserisci il tuo cognome : ");
 console.log("Il cognome inserito è : "+cognome);
 var cognomeGroup = ["Novello", "Primerano", "Forghieri", "Gallici", "Siri", "Jolanda", "Provolo", "Rispoli"];
 var inserito = false;
-var i = 0, j=0, p;
+var i = 0, j=0, p, contenutoPrecendente;
 
 while (i<cognomeGroup.length) {
   if (cognome==cognomeGroup[i]) {
@@ -22,9 +22,12 @@ if (inserito===false) {
 console.log("Lista COGNOME ORDINATA");
 while (j<cognomeGroup.length){
   console.log(cognomeGroup[j]);
+  contenutoPrecedente = document.getElementById("cognomeOutput").innerHTML;
+  document.getElementById("cognomeOutput").innerHTML = contenutoPrecedente + "<li>" + cognomeGroup[j] + "</li>";
   j++;
 }
 
 // Scrivi anche la posizione della lista in cui il nuovo utente si trova
 p = 1+cognomeGroup.indexOf(cognome);
 console.log("La posizione è = "+p);
+document.getElementById('pos').innerHTML = p;
