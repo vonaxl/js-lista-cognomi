@@ -3,7 +3,7 @@ var cognome = prompt("Inserisci il tuo cognome : ");
 console.log("Il cognome inserito è : "+cognome);
 var cognomeGroup = ["Novello", "Primerano", "Forghieri", "Gallici", "Siri", "Jolanda", "Provolo", "Rispoli"];
 var inserito = false;
-var i = 0,j=0;
+var i = 0, j=0;
 
 while (i<cognomeGroup.length) {
   if (cognome==cognomeGroup[i]) {
@@ -16,13 +16,12 @@ while (i<cognomeGroup.length) {
 // inseriscilo in un array con altri cognomi
 if (inserito===false) {
   cognomeGroup.push(cognome);
+  cognomeGroup.sort();
 }
 // e stampa la lista ordinata alfabeticamente.
-
+console.log("Lista COGNOME ORDINATA");
 while (j<cognomeGroup.length){
   console.log(cognomeGroup[j]);
   j++;
 }
-
-
 // Scrivi anche la posizione della lista in cui il nuovo utente si trova
