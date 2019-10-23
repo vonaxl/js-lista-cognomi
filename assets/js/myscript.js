@@ -10,6 +10,7 @@ while (i<cognomeGroup.length) {
   if (cognome==cognomeGroup[i]) {
     inserito = true;
     console.log("Il cognome è gia presente nella lista");
+    alert("Il tuo cognome era gia presente nella lista")
   }
   i++;
 }
