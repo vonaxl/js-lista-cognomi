@@ -4,7 +4,7 @@ document.getElementById('cognomeOutput').innerHTML = cognome;
 console.log("Il cognome inserito è : "+cognome);
 var cognomeGroup = ["Novello", "Primerano", "Forghieri", "Gallici", "Siri", "Jolanda", "Provolo", "Rispoli"];
 var inserito = false;
-var i = 0, j=0, p, contenutoPrecendente;
+var i = 0, j=0,n=0, p, contenutoPrecendente;
 
 while (i<cognomeGroup.length) {
   if (cognome==cognomeGroup[i]) {
@@ -17,14 +17,23 @@ while (i<cognomeGroup.length) {
 // inseriscilo in un array con altri cognomi
 if (inserito===false) {
   cognomeGroup.push(cognome);
-  cognomeGroup.sort();
 }
-// e stampa la lista ordinata alfabeticamente.
+
+console.log("Lista COGNOME INORDINATA");
+while (n<cognomeGroup.length){
+  console.log(cognomeGroup[n]);
+  contenutoPrecedente = document.getElementById("cognomeGroupOutputNotOrdered").innerHTML;
+  document.getElementById("cognomeGroupOutputNotOrdered").innerHTML = contenutoPrecedente + "<li>" + cognomeGroup[n] + "</li>";
+  n++;
+}
+// e stampa la lista ordinata alfabeticamente..
+
+cognomeGroup.sort();
 console.log("Lista COGNOME ORDINATA");
 while (j<cognomeGroup.length){
   console.log(cognomeGroup[j]);
-  contenutoPrecedente = document.getElementById("cognomeGroupOutput").innerHTML;
-  document.getElementById("cognomeGroupOutput").innerHTML = contenutoPrecedente + "<li>" + cognomeGroup[j] + "</li>";
+  contenutoPrecedente = document.getElementById("cognomeGroupOutputOrdered").innerHTML;
+  document.getElementById("cognomeGroupOutputOrdered").innerHTML = contenutoPrecedente + "<li>" + cognomeGroup[j] + "</li>";
   j++;
 }
 
