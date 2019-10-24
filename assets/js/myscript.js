@@ -40,6 +40,6 @@ while (j<listaCopy.length){
 }
 
 // Scrivi anche la posizione della lista in cui il nuovo utente si trova
-p = 1+cognomeGroup.indexOf(cognome);
+p = 1+listaCopy.indexOf(cognome);
 console.log("La posizione è = "+p);
 document.getElementById('pos').innerHTML = p;
