@@ -27,14 +27,15 @@ while (n<cognomeGroup.length){
   document.getElementById("cognomeGroupOutputNotOrdered").innerHTML = contenutoPrecedente + "<li>" + cognomeGroup[n] + "</li>";
   n++;
 }
+var listaCopy=cognomeGroup.slice();
 // e stampa la lista ordinata alfabeticamente..
 
-cognomeGroup.sort();
+listaCopy.sort();
 console.log("Lista COGNOME ORDINATA");
-while (j<cognomeGroup.length){
-  console.log(cognomeGroup[j]);
+while (j<listaCopy.length){
+  console.log(listaCopy[j]);
   contenutoPrecedente = document.getElementById("cognomeGroupOutputOrdered").innerHTML;
-  document.getElementById("cognomeGroupOutputOrdered").innerHTML = contenutoPrecedente + "<li>" + cognomeGroup[j] + "</li>";
+  document.getElementById("cognomeGroupOutputOrdered").innerHTML = contenutoPrecedente + "<li>" + listaCopy[j] + "</li>";
   j++;
 }
 
